@@ -1,4 +1,4 @@
-#hi
+#q
 FROM centos:7
 RUN yum -y update && yum -y upgrade && yum -y install wget curl git  gcc gcc-c++ glibc-devel make ncurses-devel openssl-devel autoconf java-1.8.0-openjdk-devel wxBase.x86_64 curl net-tools 
 RUN yum -y install epel-release && yum -y install erlang
