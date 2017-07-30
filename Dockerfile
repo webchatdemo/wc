@@ -9,7 +9,7 @@ RUN git init && git clone "https://github.com/Antibiotic/websocket_chat" && git 
 WORKDIR /opt/rebar3 
 RUN cd /opt/rebar3 && ./bootstrap && ./rebar3 local install
 RUN echo "export PATH=$PATH:~/.cache/rebar3/bin" >> ~/.bashrc && cp ~/.cache/rebar3/bin/rebar3 /usr/bin/
-RUN sed -i s/localhost/95.213.204.113/g /opt/websocket_chat/priv/www/index.js
+RUN sed -i s/localhost/<--IP-->/g /opt/websocket_chat/priv/www/index.js
 WORKDIR /opt/websocket_chat/
 RUN make compile
 VOLUME [ "/sys/fs/cgroup" ]
